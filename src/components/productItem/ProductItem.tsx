@@ -1,4 +1,4 @@
-import { ProductItemType } from "./productItem.types";
+import { ProductItemType } from "../../reducer/product.types";
 import {
   VStack,
   Image,

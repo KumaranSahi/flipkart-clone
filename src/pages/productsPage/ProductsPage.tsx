@@ -1,15 +1,16 @@
 import { Box } from "@chakra-ui/react";
 import { ProductItem, Filters } from "../../components";
-import products from "../../data/products.json";
 import {
   UnorderedList,
   ListItem,
   useMediaQuery,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useProductContext } from "../../reducer/ProductContext";
 
 export const ProductsaPage = () => {
   const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
+  const { products } = useProductContext();
   return (
     <Box>
       <Box
