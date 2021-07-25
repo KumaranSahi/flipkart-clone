@@ -20,13 +20,7 @@ export const ProductItem = ({
   size,
 }: ProductItemType) => {
   return (
-    <VStack
-      alignItems="flex-start"
-      width="20rem"
-      height="30rem"
-      padding="2"
-      shadow="dark-lg"
-    >
+    <VStack alignItems="flex-start" width="20rem" height="30rem" padding="2">
       <Image src={image} width="100%" height="75%" />
       <HStack justifyContent="space-between">
         <Text color="teal" fontWeight="bold">

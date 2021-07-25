@@ -14,7 +14,7 @@ export const useProductContext = () =>
 
 export const initialState: ProductStateType = {
   products: products,
-  sortBy: undefined,
+  sortBy: "LOW_TO_HIGH",
   idealFor: undefined,
   size: undefined,
   brands: [],
