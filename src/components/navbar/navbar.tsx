@@ -5,7 +5,14 @@ import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 export const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <HStack justifyContent="space-between" boxShadow="dark-lg" zIndex="banner" padding="2">
+    <HStack
+      justifyContent="space-between"
+      boxShadow="dark-lg"
+      // position="fixed"
+      zIndex="banner"
+      padding="2"
+      width="100%"
+    >
       <Heading color="teal">Flipkart</Heading>
       <Button onClick={toggleColorMode} borderRadius="full">
         {colorMode === "light" ? (

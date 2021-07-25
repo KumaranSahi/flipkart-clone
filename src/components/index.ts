@@ -1,1 +1,2 @@
-export { Navbar } from "./navbar/navbar";
+export { Navbar } from "./navbar/Navbar";
+export { ProductItem } from "./productItem/ProductItem";
