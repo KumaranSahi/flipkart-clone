@@ -49,6 +49,7 @@ export const Filters = () => {
       </Heading>
       <RadioGroup
         value={sortBy}
+        
         onChange={(event) =>
           dispatch({
             type: "SORT_BY_PRICE",
@@ -81,20 +82,20 @@ export const Filters = () => {
       <Heading fontSize="xl" color="teal">
         Sizes
       </Heading>
-      <RadioGroup
+      <CheckboxGroup
         value={size}
         onChange={(event) =>
           dispatch({
             type: "FILTER_BY_SIZE",
-            payload: event as "S" | "M" | "L" | "XL",
+            payload: event as string[],
           })
         }
       >
-        <Radio value="S">S</Radio>
-        <Radio value="M">M</Radio>
-        <Radio value="L">L</Radio>
-        <Radio value="XL">XL</Radio>
-      </RadioGroup>
+        <Checkbox value="S">S</Checkbox>
+        <Checkbox value="M">M</Checkbox>
+        <Checkbox value="L">L</Checkbox>
+        <Checkbox value="XL">XL</Checkbox>
+      </CheckboxGroup>
       <Heading fontSize="xl" color="teal">
         Brands
       </Heading>

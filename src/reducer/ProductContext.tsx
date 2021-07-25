@@ -16,7 +16,7 @@ export const initialState: ProductStateType = {
   products: products,
   sortBy: "LOW_TO_HIGH",
   idealFor: undefined,
-  size: undefined,
+  size: [],
   brands: [],
   fastDelivery: false,
 };
@@ -31,9 +31,9 @@ const filteredProducts = (
       ({ gender }) => gender === state.idealFor
     );
   }
-  if (state.size) {
+  if (state.size.length > 0) {
     productFiltering = productFiltering.filter(({ size }) =>
-      size.includes(state.size!)
+      size.some((s) => state.size.includes(s))
     );
   }
   if (state.brands && state.brands.length > 0) {

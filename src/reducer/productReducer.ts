@@ -29,7 +29,7 @@ export const productReducer = (
     case "FILTER_BY_SIZE":
       return {
         ...state,
-        size: action.payload,
+        size: [...action.payload],
       };
     case "CLEAR_FILTERS":
       return initialState;

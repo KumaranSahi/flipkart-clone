@@ -17,7 +17,7 @@ export type ProductStateType = {
   products: ProductItemType[];
   sortBy: "LOW_TO_HIGH" | "HIGH_TO_LOW" | undefined;
   idealFor: "FEMALE" | "MALE" | undefined;
-  size: "S" | "M" | "L" | "XL" | undefined;
+  size: string[];
   brands: string[];
   fastDelivery: boolean;
 };
@@ -33,7 +33,7 @@ export type ProductActionType =
     }
   | {
       type: "FILTER_BY_SIZE";
-      payload: "S" | "M" | "L" | "XL" | undefined;
+      payload: string[];
     }
   | {
       type: "FILTER_BY_BRANDS";
