@@ -7,6 +7,7 @@ import {
   Avatar,
   TagLabel,
   HStack,
+  Select,
 } from "@chakra-ui/react";
 import logo from "../../data/images/Logo with background.png";
 
@@ -16,12 +17,13 @@ export const ProductItem = ({
   image,
   price,
   title,
+  size,
 }: ProductItemType) => {
   return (
     <VStack
       alignItems="flex-start"
       width="20rem"
-      height="27rem"
+      height="30rem"
       padding="2"
       shadow="dark-lg"
     >
@@ -38,9 +40,24 @@ export const ProductItem = ({
         )}
       </HStack>
       <Text>{title.slice(0, 20)}...</Text>
-      <Text color="teal" fontWeight="bold" fontSize="xl">
-        Rs. {price}
-      </Text>
+      <HStack justifyContent="space-between" width="100%">
+        <Text
+          color="teal"
+          fontWeight="bold"
+          fontSize="xl"
+          flex="4"
+          textAlign="left"
+        >
+          Rs. {price}
+        </Text>
+        <Select placeholder="Size" flex="1.5">
+          {size.map((size) => (
+            <option value={size} key={size}>
+              {size}
+            </option>
+          ))}
+        </Select>
+      </HStack>
     </VStack>
   );
 };
