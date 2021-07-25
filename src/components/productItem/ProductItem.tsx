@@ -42,7 +42,7 @@ export const ProductItem = ({
           flex="4"
           textAlign="left"
         >
-          Rs. {price}
+          Rs. {price.toLocaleString()}
         </Text>
         <Select placeholder="Size" flex="1.5">
           {size.map((size) => (
