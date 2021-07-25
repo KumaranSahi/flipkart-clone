@@ -82,5 +82,29 @@
     "brand": "LEVI",
     "fastDelivery": true,
     "gender": "MALE"
+  },
+  {
+    "id": 8,
+    "title": "Women's Short Sleeve Moisture",
+    "price": 700,
+    "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+    "size": ["S", "M"],
+    "brand": "JOCKEY",
+    "fastDelivery": true,
+    "gender": "FEMALE"
+  },
+  {
+    "id": 9,
+    "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+    "price": 10000,
+    "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+    "size": ["S", "M", "L"],
+    "brand": "FOSSIL",
+    "fastDelivery": true,
+    "gender": "FEMALE"
   }
 ]
