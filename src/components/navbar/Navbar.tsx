@@ -4,12 +4,18 @@ import {
   Button,
   useColorMode,
   useColorModeValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faSun, faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
 
-export const Navbar = () => {
+export const Navbar = ({
+  openDrawer,
+}: {
+  openDrawer: (arg0: boolean) => void;
+}) => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
   return (
     <HStack
       justifyContent="space-between"
@@ -22,6 +28,11 @@ export const Navbar = () => {
       top="0%"
       bg={useColorModeValue("white", "gray.800")}
     >
+      {!isLargerThan700 && (
+        <Button borderRadius="full" onClick={() => openDrawer(true)}>
+          <FontAwesomeIcon icon={faBars} />
+        </Button>
+      )}
       <Heading color="teal">Flipkart</Heading>
       <Button onClick={toggleColorMode} borderRadius="full">
         {colorMode === "light" ? (

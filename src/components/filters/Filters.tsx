@@ -24,7 +24,7 @@ export const Filters = () => {
     useProductContext();
 
   return (
-    <VStack marginTop="1rem" padding="1" alignItems="flex-start">
+    <VStack marginTop="2rem" padding="1" alignItems="flex-start">
       <Button
         color="teal"
         width="100%"
@@ -108,7 +108,9 @@ export const Filters = () => {
         }
       >
         {getBrands().map((brand: string) => (
-          <Checkbox value={brand}>{brand}</Checkbox>
+          <Checkbox value={brand} key={brand}>
+            {brand}
+          </Checkbox>
         ))}
       </CheckboxGroup>
     </VStack>
